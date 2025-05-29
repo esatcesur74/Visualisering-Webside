@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customize Your Box | Toronto Cupcake</title>
+  <link rel="icon" type="image/png" href="pics/hearticon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> 
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <img src="pics/logo.png" alt="Toronto Cupcake Logo" />
+    </a>
+    
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#cart" class="order-btn"><i class="fa-solid fa-cart-shopping"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="customize-box">
+    <h1 class="section-title">Build Your Dream Cupcake Box 🧁</h1>
+
+   
+    <div class="box-size-picker">
+      <h2>Select Your Box:</h2>
+      <div class="box-size-cards">
+        <div class="box-card" data-box="6">
+          <img src="pics/personalbox.png" alt="6-Pack" />
+          <h3>6-Pack</h3>
+          <p>$24.99</p>
+        </div>
+
+        <div class="box-card" data-box="12">
+          <div class="save-tag">Save 10%</div>
+          <img src="pics/personalbox.png" alt="12-Pack" />
+          <h3>12-Pack</h3>
+          <p>$46.49</p>
+        </div>
+
+        <div class="box-card" data-box="18">
+          <div class="save-tag">Save 15%</div>
+          <img src="pics/personalbox.png" alt="18-Pack" />
+          <h3>18-Pack</h3>
+          <p>$64.99</p>
+        </div>
+
+        <div class="box-card charity" data-box="Weekly Charity Box">
+          <div class="charity-tag">Limited Box</div>
+          <img src="pics/personalbox.png" alt="Weekly Charity Box" />
+          <h3><i class="fas fa-heart" style="color: #d16b86; margin-right: 6px;"></i>8-pack Weekly  Box</h3>
+          <p>$29.99 – Proceeds donated</p>
+          <small style="color: #666;">Flavors of your choice  + supports local charity</small>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="choose-flavors">
+      <h2>Choose Your Flavors:</h2>
+      <p class="flavor-hint">(Add up to 6, 12, or 18 based on your selected box)</p>
+      <div class="flavor-grid">
+    
+        <div class="flavor-card" data-flavor="Barbie">
+          <img src="pics/barbiecupcake.png" alt="Barbie Cupcake" />
+          <h3>Barbie</h3>
+          <div class="flavor-controls">
+            <button class="minus-btn">−</button>
+            <span class="flavor-count">0</span>
+            <button class="plus-btn">+</button>
+          </div>
+        </div>
+
+        <div class="flavor-card" data-flavor="Oreo">
+          <img src="pics/oreo.png" alt="Oreo" />
+          <h3>Oreo</h3>
+          <div class="flavor-controls">
+            <button class="minus-btn">−</button>
+            <span class="flavor-count">0</span>
+            <button class="plus-btn">+</button>
+          </div>
+        </div>
+    
+        <div class="flavor-card" data-flavor="Hello Kitty">
+          <img src="pics/hello kitty.png" alt="Hello Kitty Cupcake" />
+          <h3>Hello Kitty</h3>
+          <div class="flavor-controls">
+            <button class="minus-btn">−</button>
+            <span class="flavor-count">0</span>
+            <button class="plus-btn">+</button>
+          </div>
+        </div>
+
+        <div class="flavor-card" data-flavor="Mermaid">
+          <img src="pics/littlemermaid.png" alt="Mermaid Cupcake" />
+          <h3>Mermaid</h3>
+          <div class="flavor-controls">
+            <button class="minus-btn">−</button>
+            <span class="flavor-count">0</span>
+            <button class="plus-btn">+</button>
+          </div>
+        </div>
+
+        <div class="flavor-card" data-flavor="Classic">
+          <img src="pics/classic.png" alt="Classic" />
+          <h3>Classic</h3>
+          <div class="flavor-controls">
+            <button class="minus-btn">−</button>
+            <span class="flavor-count">0</span>
+            <button class="plus-btn">+</button>
+          </div>
+        </div>
+
+        <div class="flavor-card" data-flavor="Sjokolade">
+          <img src="pics/sjokolade.png" alt="SjokoladeCupcake" />
+          <h3>Chocolate</h3>
+          <div class="flavor-controls">
+            <button class="minus-btn">−</button>
+            <span class="flavor-count">0</span>
+            <button class="plus-btn">+</button>
+          </div>
+        </div>
+
+
+    
+      </div>
+    </div>
+    
+
+
+    <div class="extras">
+        <h2>Extras</h2>
+        <div class="extras-grid">
+          <div class="extra-card" data-extra="Personal Note">
+            <img src="pics/personal note.png" alt="Personal Note" />
+            <h3>Personal Note</h3>
+            <p>$2.99</p>
+          </div>
+      
+          <div class="extra-card" data-extra="Ribbons">
+            <img src="pics/ribbon.png" alt="Ribbons" />
+            <h3>Ribbons</h3>
+            <p>$4.99</p>
+          </div>
+      
+          
+        </div>
+      </div>
+
+      <div class="complete-order-section" style="text-align: right;">
+        <button id="complete-order-btn" class="btn filled">Complete Order</button>
+      </div>
+      
+      
+      
+
+      <script>
+        let selectedBoxSize = 0;
+      
+        
+        document.querySelectorAll('.box-card').forEach(card => {
+          card.addEventListener('click', () => {
+            document.querySelectorAll('.box-card').forEach(c => c.classList.remove('selected'));
+            card.classList.add('selected');
+      
+            const box = card.getAttribute('data-box');
+
+            if (box === "6" || box === "12" || box === "18") { 
+              selectedBoxSize = parseInt(box);} else if (box === "Weekly Charity Box") {
+                selectedBoxSize = 8;  } else {
+                  selectedBoxSize = 0;
+                }
+
+            
+            document.querySelectorAll('.flavor-count').forEach(c => c.textContent = "0");
+          });
+        });
+      
+        
+        function getTotalSelected() {
+          let total = 0;
+          document.querySelectorAll('.flavor-count').forEach(span => {
+            total += parseInt(span.textContent);
+          });
+          return total;
+        }
+      
+        
+        document.querySelectorAll('.flavor-card').forEach(card => {
+          const plusBtn = card.querySelector('.plus-btn');
+          const minusBtn = card.querySelector('.minus-btn');
+          const countSpan = card.querySelector('.flavor-count');
+      
+          plusBtn.addEventListener('click', () => {
+            const current = parseInt(countSpan.textContent);
+            const total = getTotalSelected();
+      
+            if (selectedBoxSize === 0 || total < selectedBoxSize) {
+              countSpan.textContent = current + 1;
+            } else {
+              alert(`You can only choose ${selectedBoxSize} total cupcakes.`);
+            }
+          });
+      
+          minusBtn.addEventListener('click', () => {
+            const current = parseInt(countSpan.textContent);
+            if (current > 0) {
+              countSpan.textContent = current - 1;
+            }
+          });
+        });
+      
+        
+        const extraCards = document.querySelectorAll('.extra-card');
+        extraCards.forEach(card => {
+          card.addEventListener('click', () => {
+            card.classList.toggle('selected');
+          });
+        });
+      
+        
+        document.getElementById('complete-order-btn').addEventListener('click', () => {
+          
+          const selectedBox = document.querySelector('.box-card.selected');
+          const boxSize = selectedBox ? selectedBox.getAttribute('data-box') : null;
+      
+          
+          const flavors = [];
+          document.querySelectorAll('.flavor-card').forEach(card => {
+            const flavorName = card.getAttribute('data-flavor');
+            const count = parseInt(card.querySelector('.flavor-count').textContent);
+            if (count > 0) {
+              flavors.push({ flavor: flavorName, count: count });
+            }
+          });
+      
+         
+          const extras = [];
+          document.querySelectorAll('.extra-card.selected').forEach(card => {
+            const extraName = card.getAttribute('data-extra');
+            extras.push(extraName);
+          });
+      
+          
+          const orderData = {
+            boxSize,
+            flavors,
+            extras
+          };
+      
+          localStorage.setItem('torontoCupcakeOrder', JSON.stringify(orderData));
+      
+          
+          window.location.href = 'cart.html';
+        });
+      </script>
+      
+      <p class="image-source" style="text-align:center; margin-top: 40px;">
+  All images on this site were generated with the assistance of AI tools.
+</p>
+
+      
+</body>
+</html>

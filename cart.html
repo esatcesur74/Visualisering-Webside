@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout | Toronto Cupcake</title>
+  <link rel="icon" type="image/png" href="pics/hearticon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <img src="pics/logo.png" alt="Toronto Cupcake Logo" />
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html#menu">Menu</a></li>
+        <li><a href="customize.html">Customize</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="cart.html" class="order-btn"><i class="fas fa-shopping-cart"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <div class="checkout-container">
+    
+    <div class="checkout-form">
+      <h2 class="section-title">Customer Info</h2>
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Jane Doe" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="jane@example.com" />
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" placeholder="123-456-7890" />
+
+      <h2 class="section-title" style="margin-top: 40px;">Shipping Address</h2>
+
+      <label for="address">Street Address</label>
+      <input type="text" id="address" placeholder="123 Cupcake Lane" />
+
+      <label for="city">City</label>
+      <input type="text" id="city" placeholder="Toronto" />
+
+      <label for="zip">Postal Code</label>
+      <input type="text" id="zip" placeholder="M4B 1B3" />
+
+      <div class="payment-method">
+        <h2 class="section-title">Payment</h2>
+        <p style="margin-bottom: 10px;">Card info (for display only)</p>
+        <div class="credit-card-fields">
+          <input type="text" placeholder="Card Number" />
+          <input type="text" placeholder="MM / YY" />
+          <input type="text" placeholder="CVC" />
+          <input type="text" placeholder="Name on Card" />
+        </div>
+      </div>
+    </div>
+   
+
+    
+    <div class="checkout-summary">
+      <img src="pics/personalbox.png" alt="Selected Box" class="summary-box-img" />
+      <div class="save-pill" id="save-pill" style="display: none;">Save 15%</div>
+      <h3>Order Summary</h3>
+      <div id="order-items"></div>
+      <div class="summary-item total">
+        <span>Total</span>
+        <span id="total-price">$0.00</span>
+      </div>
+      <button class="btn-checkout">Place Order</button>
+    </div>    
+      <div id="personal-note-summary" style="display: none; margin-top: 30px;">
+        <label for="personal-note">Write your note:</label>
+        <textarea id="personal-note" placeholder="Type your message here..." rows="4" style="width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #ccc;"></textarea>
+      </div>
+      
+    </div>
+    
+    <script>
+      const prices = {
+        "6": 24.99,
+        "12": 46.49,
+        "18": 64.99,
+        "Weekly Charity Box": 29.99,
+        "Ribbons": 4.99,
+        "Personal Note": 2.99
+      };
+    
+      function renderOrderSummary() {
+        const order = JSON.parse(localStorage.getItem('torontoCupcakeOrder'));
+        if (!order) return;
+    
+        const orderItemsDiv = document.getElementById('order-items');
+        const totalPriceSpan = document.getElementById('total-price');
+        let total = 0;
+    
+        
+        if (order.boxSize) {
+          const boxPrice = prices[order.boxSize] || 0;
+          total += boxPrice;
+    
+          let discountText = "";
+          if (order.boxSize === "12") {
+            discountText = " (Save 10%)";
+          } else if (order.boxSize === "18") {
+            discountText = " (Save 15%)";
+          }
+    
+          const boxItem = document.createElement('div');
+          boxItem.className = "summary-item";
+          boxItem.innerHTML = `<span>${order.boxSize} Box${discountText}</span><span>$${boxPrice.toFixed(2)}</span>`;
+          orderItemsDiv.appendChild(boxItem);
+        }
+    
+        
+        order.flavors.forEach(flavor => {
+          const item = document.createElement('div');
+          item.className = "summary-item";
+          item.innerHTML = `<span>${flavor.count}× ${flavor.flavor}</span><span>—</span>`;
+          orderItemsDiv.appendChild(item);
+        });
+    
+        
+        order.extras.forEach(extra => {
+          const price = prices[extra] || 0;
+          total += price;
+    
+          const item = document.createElement('div');
+          item.className = "summary-item";
+          item.innerHTML = `<span>${extra}</span><span>$${price.toFixed(2)}</span>`;
+          orderItemsDiv.appendChild(item);
+        });
+    
+        
+        totalPriceSpan.textContent = `$${total.toFixed(2)}`;
+    
+        
+        if (order.extras.includes("Personal Note")) {
+          document.getElementById("personal-note-summary").style.display = "block";
+        }
+      }
+    
+     
+      document.addEventListener('DOMContentLoaded', renderOrderSummary);
+    
+      
+      document.querySelector('.btn-checkout').addEventListener('click', () => {
+        const note = document.getElementById("personal-note")?.value || "";
+        localStorage.setItem('personalNoteText', note);
+        window.location.href = "kvittering.html";
+      });
+    </script>
+    
+    <p class="image-source" style="text-align:center; margin-top: 40px;">
+  All images on this site were generated with the assistance of AI tools.
+</p>
+
+  
+</body>
+</html>

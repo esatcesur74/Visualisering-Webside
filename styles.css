@@ -1,0 +1,1226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fffafc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cherry Bomb One', cursive;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  max-height: 80px;
+  overflow: hidden;
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #444;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d16b86;
+}
+
+.order-btn {
+  background-color: #d16b86;
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+
+/* BUTTONS */
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cherry Bomb One', cursive;
+}
+
+.btn.filled {
+  background-color: #d16b86;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn.filled:hover {
+  background-color: #f0a54d; 
+}
+
+
+/* GRID SECTION */
+
+.grid-section {
+  padding: 40px 80px;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #d16b86;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+/* INFO SECTION */
+
+.info-section {
+  text-align: center;
+  padding: 60px 80px;
+  background-color: #fff;
+}
+
+.info-section .section-title {
+  font-size: 2.2rem;
+  color: #d16b86;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-items: center;
+}
+
+.info-card {
+  background-color: #fffafc;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  max-width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card img {
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.info-card h3 {
+  color: #222;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.info-card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+
+/* VALUES SECTION */
+
+.values-section {
+  padding: 80px;
+  background-color: #fff;
+}
+
+.values-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.values-text {
+  flex: 1;
+}
+
+.values-text h2 {
+  font-size: 2.2rem;
+  color: #d16b86;
+  margin-bottom: 20px;
+}
+
+.values-text p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.btn.dark {
+  background-color: #2a2a2a;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.values-image img {
+  width: 500px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* TESTIMONIALS SECTION */
+
+.testimonial-section {
+  background-color: #fffafc;
+  padding: 60px 80px;
+  text-align: center;
+}
+
+.testimonial-section .section-title {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 0.95rem;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  transition: transform 0.2s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+}
+
+.gift-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff4eb;
+  padding: 60px;
+  border-radius: 30px;
+  margin: 60px 80px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.gift-box-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.gift-box-content h2 {
+  font-size: 2.8rem;
+  color: #d16b86;
+  margin-bottom: 20px;
+  font-family: 'Cherry Bomb One', cursive;
+}
+
+.gift-box-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.box-options h3,
+.extras h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.box-btn {
+  margin-right: 10px;
+  margin-bottom: 15px;
+  padding: 10px 16px;
+  border: 2px solid #d16b86;
+  border-radius: 30px;
+  background-color: transparent;
+  color: #d16b86;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.box-btn:hover {
+  background-color: #fbd4d7;
+}
+
+.extras-list {
+  list-style: none;
+  padding: 0;
+}
+
+.extras-list li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #444;
+  font-weight: 500;
+}
+
+.gift-box-image img {
+  width: 350px;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .gift-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .gift-box-image img {
+    margin-top: 20px;
+    align-self: center;
+  }
+}
+
+/* carousel */
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  background: #fffafc;
+  overflow: hidden;
+}
+
+
+.carousel-wrapper {
+  flex: 1;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-height: 87vh;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px;
+  width: 100%;
+  height: 100%; 
+  background: #fff4eb;
+  border-radius: 20px;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+.carousel-slide.active {
+  display: flex;
+}
+
+.carousel-text {
+  flex: 1;
+  max-width: 700px;
+}
+
+.carousel-text h2 {
+  font-size: 3rem;
+  color: #d16b86;
+  font-family: 'Cherry Bomb One', cursive;
+  margin-bottom: 20px;
+}
+
+.carousel-text p {
+  font-size: 1.25rem;
+  color: #444;
+  margin-bottom: 25px;
+  max-width: 500px;
+}
+
+.carousel-slide img {
+  width: 700px;
+  max-width: 45%;
+  border-radius: 15px;
+  flex-shrink: 0;
+}
+
+.carousel-controls {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 20px;
+  font-size: 2rem;
+  color: #d16b86;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 12px 20px;
+  border: 2px solid #d16b86;
+  border-radius: 30px;
+  flex: 1;
+  outline: none;
+}
+
+.newsletter-form button {
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: none;
+  background-color: #d16b86;
+  color: white;
+  font-family: 'Cherry Bomb One', cursive;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #f0a54d;
+}
+
+.promo-banner {
+  width: 100%;
+  background-color: #ffeef1;
+  color: #d16b86;
+  padding: 12px 0;
+  font-weight: bold;
+  font-family: 'Cherry Bomb One', cursive;
+  font-size: 1rem;
+  overflow: hidden; 
+  white-space: nowrap;
+  text-align: center;
+}
+
+
+.marquee {
+  display: flex;
+  width: 200%;  
+  animation: marqueeAnim 25s linear infinite;
+}
+
+.marquee-block {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  gap: 30px;  
+}
+
+.marquee-block span {
+  margin: 0 10px; 
+}
+
+
+
+@keyframes marqueeAnim {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+/* footer */
+
+.site-footer {
+  background-color: #fff4eb;
+  padding: 60px 40px 30px;
+  font-family: 'Quicksand', sans-serif;
+  color: #444;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-family: 'Cherry Bomb One', cursive;
+  font-size: 1.1rem;
+  color: #d16b86;
+}
+
+.footer-links h4,
+.footer-contact h4,
+.footer-social h4 {
+  font-family: 'Cherry Bomb One', cursive;
+  color: #d16b86;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #444;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #d16b86;
+}
+
+.footer-contact p {
+  margin-bottom: 8px;
+}
+
+.footer-social a {
+  color: #d16b86;
+  font-size: 1.5rem;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #f0a54d;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.charity-flavors {
+  text-align: center;
+  background: #fff4eb;
+  padding: 60px 30px;
+}
+
+.flavor-header {
+  margin-bottom: 30px;
+}
+
+.flavor-tag {
+  display: inline-block;
+  background: #fbd4d7;
+  color: #333;
+  font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.flavor-header h2 {
+  font-size: 2.4rem;
+  color: #d16b86;
+  font-family: 'Cherry Bomb One', cursive;
+  margin-bottom: 8px;
+}
+
+.flavor-header p {
+  font-size: 1rem;
+  color: #444;
+  max-width: 600px;
+  margin: 0 auto 10px;
+}
+
+.flavor-subtext {
+  font-size: 0.95rem;
+  color: #777;
+  margin-top: 10px;
+}
+
+.flavor-verticals {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.flavor-column {
+  max-width: 260px;
+  text-align: center;
+}
+
+.flavor-column img {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+
+.flavor-column h3 {
+  font-size: 1.6rem;
+  color: #d16b86;
+  font-family: 'Cherry Bomb One', cursive;
+  margin-bottom: 10px;
+}
+
+.flavor-column p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.flavor-footer {
+  margin-top: 40px;
+}
+
+.flavor-footer .btn {
+  background-color: #d16b86;
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-family: 'Cherry Bomb One', cursive;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.flavor-footer .btn:hover {
+  background-color: #f0a54d;
+}
+
+.btn.outline {
+  border: 2px solid #d16b86;
+  background-color: transparent;
+  color: #d16b86;
+  font-family: 'Cherry Bomb One', cursive;
+  padding: 12px 26px;
+  border-radius: 30px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn.outline:hover {
+  background-color: #fbd4d7;
+}
+
+
+/* OCCASION SECTION STYLES */
+
+.occasion-section {
+  background-color: #fff;  
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.occasion-header {
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.occasion-header h2 {
+  font-size: 2rem;
+  color: #222; 
+  margin-bottom: 10px;
+  font-family: 'Segoe UI', sans-serif; 
+  letter-spacing: 1px;
+}
+
+.occasion-header p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* 3-column grid */
+.occasion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.occasion-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.occasion-card img {
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.occasion-card h3 {
+  font-size: 1.2rem;
+  color: #111;
+  margin-bottom: 10px;
+  text-transform: uppercase; 
+  letter-spacing: 1px;
+}
+
+.occasion-card p {
+  font-size: 0.95rem;
+  color: #555;
+  max-width: 400px;
+  line-height: 1.4;
+}
+
+
+.occasion-card img:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+
+/*********************************
+  PAGE CONTAINER & TITLE
+*********************************/
+.customize-box {
+  width: 100%;
+  max-width: 1100px;
+  margin: 80px auto 40px;
+  background-color: #fffafc;
+  padding: 40px 20px;
+}
+
+.customize-box .section-title {
+  font-family: 'Cherry Bomb One', cursive;
+  font-size: 2.5rem;
+  color: #d16b86;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/*********************************
+  BOX SIZE PICKER
+*********************************/
+.box-size-picker {
+  margin-bottom: 40px;
+}
+
+.box-size-picker h2 {
+  font-size: 1.6rem;
+  font-family: 'Cherry Bomb One', cursive;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.box-size-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box-card {
+  background-color: #fff4eb;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  width: 220px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.box-card:hover {
+  transform: translateY(-6px);
+}
+
+.box-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.box-card h3 {
+  font-size: 1.3rem;
+  color: #d16b86;
+  font-family: 'Cherry Bomb One', cursive;
+  margin-bottom: 10px;
+}
+
+.box-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.box-card input[type="radio"] {
+  margin-top: 10px;
+}
+
+.save-tag,
+.charity-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #f0a54d;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-family: 'Cherry Bomb One', cursive;
+}
+
+.charity {
+  background-color: #fff4eb;
+  border: 2px dashed #f0a5b5; 
+}
+
+.charity:hover {
+  box-shadow: 0 0 15px rgba(209, 107, 134, 0.3);
+  transform: scale(1.02);
+}
+
+.charity::after {
+  content: "Charity";
+  position: absolute;
+  top: 10px;
+  right: -30px;
+  background-color: #d16b86;
+  color: white;
+  padding: 4px 10px;
+  transform: rotate(45deg);
+  font-size: 0.7rem;
+  font-family: 'Cherry Bomb One', cursive;
+}
+
+
+
+
+.charity .charity-tag {
+  background-color: #d16b86;
+}
+
+/*********************************
+  EXTRAS
+*********************************/
+.extras {
+  margin-bottom: 60px;
+  padding: 20px 0;
+}
+
+.extras h2 {
+  font-size: 2rem;
+  font-family: 'Cherry Bomb One', cursive;
+  color: #222;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.extras-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: flex-start;
+}
+
+.extra-card {
+  background-color: #ffeef1;
+  border-radius: 16px;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.extra-card:hover {
+  transform: translateY(-5px);
+}
+
+.extra-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.extra-card h3 {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.extra-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.extra-card button {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #d16b86;
+  color: white;
+  font-family: 'Cherry Bomb One', cursive;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.extra-card button:hover {
+  background-color: #f0a54d;
+}
+
+
+.box-card.selected,
+.extra-card.selected {
+  border: 2px solid #d16b86;
+  box-shadow: 0 0 10px rgba(209, 107, 134, 0.4);
+  background-color: #fff0f3;
+}
+
+.add-extra.selected {
+  background-color: #f0a54d;
+}
+
+
+/*********************************
+  RESPONSIVE
+*********************************/
+@media (max-width: 768px) {
+  .box-size-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .extras-options {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fffafc;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.checkout-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 60px auto;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.checkout-form,
+.checkout-summary {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.checkout-form {
+  flex: 1;
+  min-width: 320px;
+}
+
+.checkout-summary {
+  width: 350px;
+}
+
+.section-title {
+  font-family: 'Cherry Bomb One', cursive;
+  font-size: 2rem;
+  color: #d16b86;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 600;
+  margin-top: 15px;
+  display: block;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.payment-method {
+  margin-top: 30px;
+}
+
+.credit-card-fields input {
+  margin-bottom: 12px;
+}
+
+.checkout-summary h3 {
+  font-family: 'Cherry Bomb One', cursive;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #d16b86;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.total {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.btn-checkout {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background-color: #d16b86;
+  color: white;
+  font-size: 1rem;
+  border-radius: 30px;
+  font-family: 'Cherry Bomb One', cursive;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-checkout:hover {
+  background-color: #f0a54d;
+}
+
+@media (max-width: 900px) {
+  .checkout-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .checkout-summary {
+    width: 100%;
+  }
+}
+
+.choose-flavors {
+  margin: 50px 0;
+  padding: 0 10px;
+}
+
+.choose-flavors h2 {
+  font-size: 2rem;
+  font-family: 'Cherry Bomb One', cursive;
+  color: #d16b86;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.flavor-hint {
+  color: #777;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.flavor-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.flavor-card {
+  width: 200px;
+  background-color: #fffafc;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.flavor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.flavor-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.flavor-card h3 {
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.flavor-card.selected {
+  border: 2px solid #d16b86;
+  background-color: #fff0f3;
+  box-shadow: 0 0 10px rgba(209, 107, 134, 0.4);
+}
+
+.flavor-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.minus-btn,
+.plus-btn {
+  background-color: #d16b86;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 6px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: 'Cherry Bomb One', cursive;
+  transition: background-color 0.3s ease;
+}
+
+.minus-btn:hover,
+.plus-btn:hover {
+  background-color: #f0a54d;
+}
+
+.flavor-count {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+  width: 24px;
+  text-align: center;
+}
+
+.summary-box-img {
+  width: 80px;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 12px;
+}
+
+.image-source {
+  font-size: 0.8rem;
+  color: #888;
+  font-style: italic;
+  margin-top: 4px;
+}
